@@ -44,6 +44,12 @@
       <height>26</height>
      </rect>
     </property>
+    <property name="maximum">
+     <double>1000.000000000000000</double>
+    </property>
+    <property name="value">
+     <double>25.000000000000000</double>
+    </property>
    </widget>
    <widget class="QLabel" name="PHIKP_QL">
     <property name="geometry">
@@ -66,6 +72,9 @@
       <width>62</width>
       <height>26</height>
      </rect>
+    </property>
+    <property name="maximum">
+     <double>1000.000000000000000</double>
     </property>
    </widget>
    <widget class="QLabel" name="PHIKP_OLD_QL">
@@ -90,6 +99,12 @@
       <height>26</height>
      </rect>
     </property>
+    <property name="maximum">
+     <double>1000.000000000000000</double>
+    </property>
+    <property name="value">
+     <double>5.000000000000000</double>
+    </property>
    </widget>
    <widget class="QLabel" name="PHIKI_OLD_QL">
     <property name="geometry">
@@ -112,6 +127,9 @@
       <width>62</width>
       <height>26</height>
      </rect>
+    </property>
+    <property name="maximum">
+     <double>1000.000000000000000</double>
     </property>
    </widget>
    <widget class="QLabel" name="PHIKI_QL">
@@ -136,6 +154,12 @@
       <height>26</height>
      </rect>
     </property>
+    <property name="maximum">
+     <double>1000.000000000000000</double>
+    </property>
+    <property name="value">
+     <double>0.200000000000000</double>
+    </property>
    </widget>
    <widget class="QLabel" name="PHIKD_OLD_QL">
     <property name="geometry">
@@ -158,6 +182,9 @@
       <width>62</width>
       <height>26</height>
      </rect>
+    </property>
+    <property name="maximum">
+     <double>1000.000000000000000</double>
     </property>
    </widget>
    <widget class="QLabel" name="PHIKD_QL">
@@ -208,6 +235,12 @@
       <height>26</height>
      </rect>
     </property>
+    <property name="maximum">
+     <double>1000.000000000000000</double>
+    </property>
+    <property name="value">
+     <double>300.000000000000000</double>
+    </property>
    </widget>
    <widget class="QLabel" name="XTRAVEL_QL">
     <property name="geometry">
@@ -230,6 +263,12 @@
       <width>62</width>
       <height>26</height>
      </rect>
+    </property>
+    <property name="maximum">
+     <double>360.000000000000000</double>
+    </property>
+    <property name="value">
+     <double>45.000000000000000</double>
     </property>
    </widget>
    <widget class="QLabel" name="TURN_ANGLE_QL">

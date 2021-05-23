@@ -18,9 +18,9 @@ class My_App(QtWidgets.QMainWindow):
         bt_baud = 9600
         self.log_msg("Attempting bluetooth connection (port: {}; baud: {}".
                 format(bt_port, bt_baud)) 
-        self.bluetooth = serial.Serial(bt_port, bt_baud)
-        ret = bluetooth.flushInput()
-        self.log_msg("Bluetooth connected: " + str(ret))
+        #self.bluetooth = serial.Serial(bt_port, bt_baud)
+        #ret = self.bluetooth.flushInput()
+        #self.log_msg("Bluetooth connected: " + str(ret))
         
         # Connect buttons to functions (SLOTS)
         self.Update_PID_QPB.clicked.connect(self.SLOT_update_PID)
@@ -29,11 +29,11 @@ class My_App(QtWidgets.QMainWindow):
 
     def SLOT_update_PID(self):
         # Save the PID from the 3 spin boxes
-        P = self.PHIKP_QDSB.Value()
-        I = self.PHIKI_QDSB.Value()
-        D = self.PHIKD_QDSB.Value()
+        P = self.PHIKP_QDSB.value()
+        I = self.PHIKI_QDSB.value()
+        D = self.PHIKD_QDSB.value()
         # Send the PID over serial BT
-        self.bluetooth.write(bytes("<P,{}><I,{}><D,{}>".format(P,I,D),'utf-8'))
+        #self.bluetooth.write(bytes("<P,{}><I,{}><D,{}>".format(P,I,D),'utf-8'))
         # Log the sent data
         self.log_msg("Set PID to P:{}, I: {}, D: {}.".format(P,I,D))
         return
@@ -45,8 +45,8 @@ class My_App(QtWidgets.QMainWindow):
 
 
     def SLOT_move_forward(self):
-        X_travel = self.XTRAVEL_QDSB.Value()
-        self.bluetooth.write(bytes("<F,{}>".format(X_travel), 'utf-8'))
+        X_travel = self.XTRAVEL_QDSB.value()
+        #self.bluetooth.write(bytes("<F,{}>".format(X_travel), 'utf-8'))
         self.log_msg("Moving forward: {}".format(X_travel))
         return
 
