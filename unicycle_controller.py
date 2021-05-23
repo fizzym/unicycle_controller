@@ -26,6 +26,13 @@ class My_App(QtWidgets.QMainWindow):
         self.Update_PID_QPB.clicked.connect(self.SLOT_update_PID)
         self.Revert_PID_QPB.clicked.connect(self.SLOT_revert_PID)
         self.Forward_QPB.clicked.connect(self.SLOT_move_forward)
+        
+        # Add arrow key shortcuts
+        QtWidgets.QShortcut(QtCore.Qt.Key_Up, self, self.SLOT_move_forward)
+        QtWidgets.QShortcut(QtCore.Qt.Key_Down, self, self.SLOT_move_back)
+        QtWidgets.QShortcut(QtCore.Qt.Key_Left, self, self.SLOT_move_left)
+        QtWidgets.QShortcut(QtCore.Qt.Key_Right, self, self.SLOT_move_right)
+
 
     def SLOT_update_PID(self):
         # Save the PID from the 3 spin boxes
@@ -49,6 +56,22 @@ class My_App(QtWidgets.QMainWindow):
         #self.bluetooth.write(bytes("<F,{}>".format(X_travel), 'utf-8'))
         self.log_msg("Moving forward: {}".format(X_travel))
         return
+
+
+    def SLOT_move_back(self):
+        self.log_msg("Function not implemented.")
+        return
+
+
+    def SLOT_move_left(self):
+        self.log_msg("Function not implemented.")
+        return
+
+
+    def SLOT_move_right(self):
+        self.log_msg("Function not implemented.")
+        return
+
 
     def log_msg(self, message):
         now = datetime.now()
